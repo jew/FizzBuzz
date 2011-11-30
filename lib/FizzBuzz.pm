@@ -1,17 +1,41 @@
 package FizzBuzz;
 use strict;
+use warnings;
+use Readonly;
+
+=head1 NAME
+
+Fizzbuzz - check nubmer and return string 
+
+=head1 DESCRIPTION
+
+Fizzbuzz for training.
+
+=head1 METHODS
+
+=cut
+
+=head2 fizzbuzz
+    return 'number' if number can not divide by 3 and 5
+    return 'fizz' if number divide by 3
+    return 'buzz' if number divide by 5
+    return 'fizzbuzz' if number can divide by 3 and 5
+=cut
+
+Readonly my $Fizz => 3;
+Readonly my $Buzz => 5;
 
 sub fizzbuzz {
 
    my ($num) = @_;
-   if( ($num%3==0)&&($num%5==0) ) {
+   if( ($num%$Fizz==0)&&($num%$Buzz==0) ) {
 
         return "fizzbuzz";
     }
-    elsif( $num%3==0 ) {
+    elsif( $num%$Fizz==0 ) {
         return "fizz";
     } 
-    elsif( $num%5==0 ) {
+    elsif( $num%$Buzz==0 ) {
         return  "buzz";
     }
     else {
