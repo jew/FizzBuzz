@@ -22,20 +22,20 @@ Fizzbuzz for training.
     return 'fizzbuzz' if number can divide by 3 and 5
 =cut
 
-Readonly my $Fizz => 3;
-Readonly my $Buzz => 5;
+Readonly my $FIZZ => 3;
+Readonly my $BUZZ => 5;
 
 sub fizzbuzz {
 
    my ($num) = @_;
-   if( ($num%$Fizz==0)&&($num%$Buzz==0) ) {
+   if( ($num%$FIZZ==0)&&($num%$BUZZ==0) ){
 
         return "fizzbuzz";
     }
-    elsif( $num%$Fizz==0 ) {
+    elsif( $num%$FIZZ==0 ) {
         return "fizz";
     } 
-    elsif( $num%$Buzz==0 ) {
+    elsif( $num%$BUZZ==0 ) {
         return  "buzz";
     }
     else {
